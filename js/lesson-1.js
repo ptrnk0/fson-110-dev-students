@@ -90,3 +90,20 @@
 
 // const result = orderDrink(drink);
 // console.log(result);
+// const count = 100
+
+// for (let i = 0; i <= count; i += 1){
+//     console.log(i)
+// }
+
+//  Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чино
+// *
+// **
+// ***
+// ****
+// *****
+let star="*"
+for (let i = 0; i <= 7; i += 1){
+    console.log(star)
+    star+="*"
+}
