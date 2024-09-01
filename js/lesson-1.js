@@ -61,3 +61,32 @@
 // } else {
 //   console.log("eror");
 // }
+
+
+
+//* Конструкція switch
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+// const drink = "кава".toLowerCase();
+// function orderDrink(drink) {
+//     let price = 0;
+//     switch (drink) {
+//         case "кава":
+//             price = 60;
+//             break;
+//         case "чай":
+//             price = 30;
+//             break;
+//         case "сік":
+//             price = 40;
+//             break;
+    
+//         default:
+//             return "Такого напоя не існує"
+//     }
+//     return `Сума замовлення ${price}грн`
+// }
+
+// const result = orderDrink(drink);
+// console.log(result);
