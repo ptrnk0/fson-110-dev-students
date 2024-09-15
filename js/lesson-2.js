@@ -32,16 +32,37 @@ styles.unshift("Реп", "Реггі");
 // }
 
 //TODO:=========task-1=================
-// Порахуй кількість слів у рядку, використовуючи методи масивів і створи новий рядок, розділений дефісами у нижньому регістрі.
+// // Порахуй кількість слів у рядку, використовуючи методи масивів і створи новий рядок, розділений дефісами у нижньому регістрі.
 
-const message = "JavaScript is a popular programming language.";
+// const message = "JavaScript is a popular programming language.";
 
-// console.log(message.length);
+// // console.log(message.length);
 
-const wordsArray = message.split(" ");
+// const wordsArray = message.split(" ");
 
-const wordsCount = wordsArray.length;
+// const wordsCount = wordsArray.length;
 
-const newMessage = wordsArray.join("-").toLowerCase();
+// const newMessage = wordsArray.join("-").toLowerCase();
 
-// console.log(newMessage);
+// // console.log(newMessage);
+
+
+//TODO:=========task-2=================
+// Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+const wordsArray = ['JavaScript', 'HTML', 'CSS', 'React'];
+const substring = 'S';
+const newArray = [];
+// for (const elem of wordsArray){
+// 	if(elem.toLowerCase().includes(substring.toLowerCase())){
+// 		newArray.push(elem);
+// 	}
+// }
+
+for (const elem of wordsArray){
+	if(elem.toLowerCase().indexOf(substring.toLowerCase())!== -1){
+		newArray.push(elem);
+	}
+}
+const result = newArray.join(", "); 
+console.log(`Масив елементів, що містять підстроку ${substring}: ${result}`);
