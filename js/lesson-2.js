@@ -81,3 +81,39 @@
 //   return res;
 // }
 // console.log(getMaxNum(numbersArray));
+
+//TODO:============task-04==============
+// Напишіть функцію min(a, b), яка повертає
+// менше з чисел a, b
+// Потрібно додати перевірку, що функція отримує числа
+
+// function min(a, b = 10) {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "Ви ввели некоректні значення";
+//   }
+//   return a < b ? a : b;
+// }
+// console.log(min(4));
+
+//TODO:=========task-05=================
+//Напишіть функцію calculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+// function calculateAverage(...args) {
+//   console.log(args);
+//   console.log(arguments);
+// }
+// function calculateAverage() {
+//   let sum = 0;
+//   let count = 0;
+//   for (const arg of arguments) {
+//     if (typeof arg !== "number") {
+//       continue;
+//     }
+//     count++;
+//     sum += arg;
+//   }
+//   return sum / count;
+// }
+// console.log(calculateAverage(100, 54, 566, "rtr"));
