@@ -117,3 +117,72 @@
 //   return sum / count;
 // }
 // console.log(calculateAverage(100, 54, 566, "rtr"));
+
+// * Літерал об'єкта
+//TODO:============task-1=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+// const human = {
+//     firstname: "Bob",
+//     hobby: "sport",
+//     age: 20,
+
+//     greet() {
+//         console.log(`Hello ${this.firstname}`);
+        
+//     }
+    
+// }
+
+// human.mood = "happy";
+// human.hobby = "skydiving";
+// // console.log(human["age"]);
+
+// // for (const key in human) {
+// //     if (human.hasOwnProperty(key)) {
+// //       console.log(human[key]);
+// //     }
+// // }
+
+// for (const values of Object.entries(human)) {
+//     console.log(values);
+// }
+
+//TODO:============task-2======================================================
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// збережіть його результат у змінній sum.
+// Якщо об'єкт salaries порожній, то результат має бути 0
+
+const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+};
+
+// function totalSalary(obj={}) {
+//     let totalSum = 0;
+//     for (const key in obj) {
+//         if (obj.hasOwnProperty(key)) {
+//             totalSum += obj[key];
+//         }
+//     }
+//     return totalSum;
+// }
+
+// function totalSalary(obj={}) {
+//     let totalSum = 0;
+//     for (const number of Object.values(obj)) {
+//         totalSum += number;
+//     }
+//     return totalSum;
+// }
+// console.log(totalSalary(salaries));
+
+
+
+
