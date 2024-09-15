@@ -132,9 +132,9 @@
 
 //     greet() {
 //         console.log(`Hello ${this.firstname}`);
-        
+
 //     }
-    
+
 // }
 
 // human.mood = "happy";
@@ -159,9 +159,9 @@
 // Якщо об'єкт salaries порожній, то результат має бути 0
 
 const salaries = {
-  Mango: 100,
-  Poly: 160,
-  Ajax: 1470,
+    Mango: 100,
+    Poly: 160,
+    Ajax: 1470,
 };
 
 // function totalSalary(obj={}) {
@@ -183,6 +183,25 @@ const salaries = {
 // }
 // console.log(totalSalary(salaries));
 
+//TODO:============task-3==============================================
+// Створіть об'єкт "магазин" зі списком товарів. Напишіть метод "hasProduct", який буде перевіряти, чи є певний товар в наявності на складі магазину.
 
+const store = {
+    product: [],
 
+    addProduct(newProduct) {
+        this.product.push(newProduct);
+    },
 
+    hasProduct(product) {
+        return this.product.includes(product);
+    },
+};
+store.addProduct("Orange");
+store.addProduct("Peach");
+store.addProduct("Kiwi");
+
+console.log(store.product);
+
+console.log(store.hasProduct("Kiwi"));
+console.log(store.hasProduct("Tomato"));
