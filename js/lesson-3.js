@@ -109,3 +109,31 @@
 
 // const res = sortedUsers(users);
 // console.log(res);
+
+// / Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+
+// const user = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
+// const getAge = (arr)=> arr.filter(item =>item.age>20)
+// const res = getAge(user);
+// console.log(res);
+// /TODO:=========task-10=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+// const numbers = [1, 2, 3, 4, 5];
+// const sum = (arr) => arr.reduce((acc,number)=>acc+=number,0)
+// const res = sum(numbers);
+// console.log(res);
+
+// const data = [
+//     { id: 1, values: [1, 2, 3] },
+//     { id: 2, values: [4, 5, 6] },
+//     { id: 3, values: [7, 8, 9] },
+// ];
+// const fn = (arr) => arr.flatMap(item => item.values)
+//     .toSorted((a, b) => b - a)
+//     .every(number => number % 2 === 0)
+// console.log(fn(data));
