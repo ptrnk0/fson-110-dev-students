@@ -80,7 +80,6 @@
 // const res = getNumber(numbers, 3);
 // console.log(res);
 
-
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
@@ -137,3 +136,109 @@
 //     .toSorted((a, b) => b - a)
 //     .every(number => number % 2 === 0)
 // console.log(fn(data));
+
+//TODO:=========task-01=================
+/**
+ * Створи клас для калькулятора, який має такі методи:
+ * - метод number, який набуває початкового значення для наступних операцій
+ * - метод getResult, який повертає фінальний результат усіх операцій, проведених із числом
+ * - методи add, substruct, divide, multiply
+ * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
+ */
+
+// class Calculator {
+//     constructor() {
+//         this.result = 0;
+//     }
+
+//     number(number) {
+//         this.result = number;
+//         return this;
+//     }
+
+//     getResult() {
+//         return this.result;
+//     }
+
+//     add(number) {
+//         this.result += number;
+//         return this;
+//     }
+
+//     substruct(number) {
+//         this.result -= number;
+//         return this;
+//     }
+
+//     divide(number) {
+//         this.result /= number;
+//         return this;
+//     }
+
+//     multiply(number) {
+//         this.result *= number;
+//         return this;
+//     }
+// }
+// const calculator = new Calculator();
+// // console.log(calculator);
+
+// const result = calculator
+//     .number(10)
+//     .add(5)
+//     .divide(2)
+//     .multiply(4)
+//     .substruct(7)
+//     .getResult();
+
+// console.log(result);
+
+// const calculator1 = new Calculator();
+// const result1 = calculator1
+//     .number(5)
+//     .add(5)
+//     .divide(5)
+//     .multiply(4)
+//     .substruct(5)
+//     .getResult();
+
+// console.log(result1);
+
+//TODO:=========task-02=================
+/**
+ * Напиши клас Client який створює об'єкт з ​​властивостями login email.
+ *
+ * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
+ */
+
+class Client {
+    #login;
+    #email;
+
+    constructor(email, login) {
+        this.#email = email;
+        this.#login = login;
+    }
+
+    get getEmail() {
+        console.log(this.#email);
+    }
+
+    set changeEmail(newEmail) {
+        this.#email = newEmail;
+    }
+
+    get getLogin() {
+        console.log(this.#login);
+    }
+
+    set changeLogin(newLogin) {
+        this.#login = newLogin;
+    }
+}
+
+const client = new Client("Mango@gmail.com", "Mango");
+client.changeEmail = "mango320@gmail.com";
+client.changeLogin = "Mango320";
+console.log(client.getEmail);
+console.log(client.getLogin);
