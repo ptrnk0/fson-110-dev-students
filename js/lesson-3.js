@@ -212,29 +212,29 @@
  */
 
 class Client {
-    #login;
-    #email;
+  #login;
+  #email;
 
-    constructor(email, login) {
-        this.#email = email;
-        this.#login = login;
-    }
+  constructor(email, login) {
+    this.#email = email;
+    this.#login = login;
+  }
 
-    get getEmail() {
-        console.log(this.#email);
-    }
+  get getEmail() {
+    console.log(this.#email);
+  }
 
-    set changeEmail(newEmail) {
-        this.#email = newEmail;
-    }
+  set changeEmail(newEmail) {
+    this.#email = newEmail;
+  }
 
-    get getLogin() {
-        console.log(this.#login);
-    }
+  get getLogin() {
+    console.log(this.#login);
+  }
 
-    set changeLogin(newLogin) {
-        this.#login = newLogin;
-    }
+  set changeLogin(newLogin) {
+    this.#login = newLogin;
+  }
 }
 
 const client = new Client("Mango@gmail.com", "Mango");

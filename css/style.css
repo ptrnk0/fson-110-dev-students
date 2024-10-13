@@ -49,3 +49,17 @@
   color: white;
   min-width: 120px;
 }
+
+.film-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
