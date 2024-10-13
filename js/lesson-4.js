@@ -95,3 +95,59 @@ watchedFilms.forEach((item) => {
   const film = filmListEl.querySelector(`#${item}`);
   film.style.opacity = 0.5;
 });
+
+//TODO:=========task-01=======Accordion==========
+/**
+ * Викоритовуй шаблон акордеон меню з файлу html та напиши наступний функціонал:
+ * при кліку на елемент меню, розкривай блок з текстом.При повторному кліку по елементу,
+ * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
+ */
+
+const accordionL = document.querySelector(".accordion-list");
+
+accordionL.addEventListener("click", onClick);
+
+function onClick(event) {
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+
+  event.target.nextElementSibling.classList.toggle("active");
+}
+
+const modBtn = document.querySelector(".modal-btn");
+
+modBtn.addEventListener("click", onModalClick);
+const bodyEl = document.body;
+let instance = null;
+function onModalClick(evt) {
+  instance = basicLightbox.create(
+    `
+    <div class="modal">
+        <p>
+            Your first lightbox with just a few lines of code.
+            Yes, it's really that simple.
+        </p>
+    </div>
+  `,
+    {
+      onShow: () => {
+        bodyEl.style.overflow = "hidden";
+        document.addEventListener("keydown", onEscClick);
+      },
+      onClose: () => {
+        bodyEl.style.overflow = "visible";
+        document.removeEventListener("keydown", onEscClick);
+      },
+    }
+  );
+  instance.show();
+}
+
+function onEscClick(evt) {
+  if (evt.code !== "Escape") {
+    return;
+  }
+  instance.close();
+  console.log("Escape");
+}
